@@ -17,8 +17,8 @@ $(document).ready(function(e) {
     $('#uf').change(function(e) {
         e.preventDefault();
         $("#local").empty();
-        var uf = $("#uf").val();
         if (uf == 'Estados') { return }
+        var uf = $("#uf").val();
         $.ajax({
             type: "get",
             url: "https://servicodados.ibge.gov.br/api/v1/localidades/estados/" + uf + "/municipios",
